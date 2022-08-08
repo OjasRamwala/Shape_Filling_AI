@@ -28,7 +28,6 @@ def decoder_block(inputs, skip_features, num_filters):
 
 def unet(input_shape):
     inputs = Input(input_shape)
-
     s1, p1 = encoder_block(inputs, 64)
     s2, p2 = encoder_block(p1, 128)
     s3, p3 = encoder_block(p2, 256)
